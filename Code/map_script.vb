@@ -2,9 +2,9 @@
 
 Sub UpdatePartial()
 
-Dim WS As Worksheet
-With ActiveSheet.UsedRange
+Set rColumnRange = Range("D2", "D75")
 
+With ActiveSheet.UsedRange
 .Replace "{MarsGameHorde}", "{Assault}", xlWhole
 .Replace "{MarsGameHorde8P}", "{Massive Assault}", xlWhole
 .Replace "MarsGameSurvival", "Kill Every Thing", xlPart
@@ -22,33 +22,6 @@ With ActiveSheet.UsedRange
 .Replace "MarsGameBighead", "Head Hunter", xlPart
 .Replace "MarsGameMVZ", "Mercs vs. Monsters", xlPart
 .Replace "MarsGameInfection", "Patient Zero", xlPart
-
 End With
+
 End Sub
-
-'SINGLE REPLACE CODE
-
-Sub ChgInfo() 
-     
-    Dim WS              As Worksheet 
-    Dim Search          As String 
-    Dim Replacement     As String 
-    Dim Prompt          As String 
-    Dim Title           As String 
-    Dim MatchCase       As Boolean 
-     
-    Prompt = "What is the original value you want to replace?"
-    Title = "Search Value Input"
-    Search = InputBox(Prompt, Title)
-     
-    Prompt = "What is the replacement value?"
-    Title = "Search Value Input"
-    Replacement = InputBox(Prompt, Title)
-     
-    For Each WS In Worksheets
-        WS.Cells.Replace What:=Search, Replacement:=Replacement, _
-        LookAt:=xlPart, MatchCase:=False
-    Next
-     
-End Sub
-
