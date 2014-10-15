@@ -1,12 +1,15 @@
 Sub RangeHide()
-    Set rColumnD = Range("D2", "D75")
-    Set rColumnE = Range("E2", "E75")
+
+Dim rCell As Range
     
-    For Each cell In rColumnD
-        If (cell.Value = "{}") Then
-            Rows(cell.Row).EntireRow.Hidden = True
+    For Each rCell In Range("D2:D75")
+        If rCell = "{}" And rCell.Offset(0, 1) = "{}" Then
+            rCell.EntireRow.Hidden = True
+        Else
+            rCell.EntireRow.Hidden = False
+            
         End If
-                
+    
     Next
  
 End Sub
