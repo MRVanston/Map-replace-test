@@ -1,7 +1,11 @@
 'MULTIPLE RANGE TEST
 
 Sub UpdatePartial()
+
+Dim WS As Worksheet
+Dim MatchCase As Boolean
 With ActiveSheet.UsedRange
+
 .Replace "MarsGameHorde", "Assault", xlPart
 .Replace "{MarsGameHorde8P}", "Massive Assault", xlPart
 .Replace "MarsGameSurvival", "Kill Every Thing", xlPart
@@ -19,6 +23,10 @@ With ActiveSheet.UsedRange
 .Replace "MarsGameBighead", "Head Hunter", xlPart
 .Replace "MarsGameMVZ", "Mercs vs. Monsters", xlPart
 .Replace "MarsGameInfection", "Patient Zero", xlPart
+
+For Each WS In Worksheets
+        WS.Cells.Replace MatchCase:=True
+
 End With
 End Sub
 
