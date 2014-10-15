@@ -25,8 +25,9 @@ With ActiveSheet.UsedRange
 .Replace "MarsGameInfection", "Patient Zero", xlPart
 
 For Each WS In Worksheets
-        WS.Cells.Replace MatchCase:=True
-
+        WS.Cells.Replace What:=Search, Replacement:=Replacement, _
+        LookAt:=xlPart, MatchCase:=False
+Next
 End With
 End Sub
 
