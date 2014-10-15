@@ -1,0 +1,24 @@
+Original Values	Replaced Values
+
+PvE:	
+	
+MarsGameHorde	Assault
+MarsGameHorde8P	Massive Assault
+MarsGameSurvival	Kill Every Thing
+MarsGameSurvival2	Kill Every Thing 2
+MarsGameAST	Assault Operations
+MarsGameZAST	Paranormal Operations
+MarsGameDefence	Threshold Defense
+MarsGameMonster	Extinction Ops
+MarsGameCM	Training
+	
+PvP:	
+	
+MarsGameQRM	Team Deathmatch
+MarsGameTDM 	Elimination
+MarsGameDM	Free-for-All
+MarsGameAnnex	King of the Hill
+MarsGameDefuse	Demolition
+MarsGameBighead	Head Hunter
+MarsGameMVZ	Mercs vs. Monsters
+MarsGameInfection	Patient Zero
